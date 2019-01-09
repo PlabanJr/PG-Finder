@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Guest.com - Come be my Guest!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/assets/footer_style.css">
+        <link rel="stylesheet" type="text/css" href="/assets/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        
+        <div class="jumbotron-fluid bg-info p-2">
+            <a class="navbar-brand ml-5" href="/">
+                <img src="/assets/images/logo.png" height="5%" width="30" alt="gg"> <strong style="color:black">Guest.com</strong>
+            </a>
+        </div>
+
+       
+        <div class="container w-50 mt-5 p-5 border rounded bg-light">
+            <div class="mb-2">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#login" data-toggle="tab">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sign_up" data-toggle="tab">Sign up</a>
+                    </li>
+                </ul>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="login">
+                <form method="POST">
+                    <div class="custom-control custom-radio custom-control-inline mb-3">
+                        <input type="radio" id="user" name="user_type" value="1" class="custom-control-input" required>
+                        <label class="custom-control-label" for="user"> User </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="owner" name="user_type" value="2" class="custom-control-input" required>
+                        <label class="custom-control-label" for="owner"> Owner </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email1" placeholder="Enter email" pattern="^((([!#$%&'*+\-/=?^_`{|}~\w])|([!#$%&'*+\-/=?^_`{|}~\w][!#$%&'*+\-/=?^_`{|}~\.\w]{0,}[!#$%&'*+\-/=?^_`{|}~\w]))[@]\w+([-.]\w+)*\.\w+([-.]\w+)*)$" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" >
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="remember"> Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-info" id="Submit1">Login</button>
+                </form>
+            </div>
+
+            <div class="tab-pane" id="sign_up">
+                <form method="POST" action="/sign_up">
+                    <div class="custom-control custom-radio custom-control-inline mb-3">
+                        <input type="radio" id="user_sign_up" name="sign_up_type" value="1" class="custom-control-input" required>
+                        <label class="custom-control-label" for="user_sign_up"> User </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="owner_sign_up" name="sign_up_type" value="2" class="custom-control-input" required>
+                        <label class="custom-control-label" for="owner_sign_up"> Owner </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" pattern="^((([!#$%&'*+\-/=?^_`{|}~\w])|([!#$%&'*+\-/=?^_`{|}~\w][!#$%&'*+\-/=?^_`{|}~\.\w]{0,}[!#$%&'*+\-/=?^_`{|}~\w]))[@]\w+([-.]\w+)*\.\w+([-.]\w+)*)$" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" pattern="^[a-zA-Z ]{5,20}" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd1" placeholder="Enter password" name="password" >
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="mobile_no" placeholder="Enter mobile number" pattern="^[6-9]\d{9}$" name="mobile_no" >
+                    </div>
+                    
+                    <button type="submit" class="btn btn-info" id="Submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+
+        <% include ../partial/footer.ejs %>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+</html>

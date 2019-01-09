@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Guest.com - Rooms</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/assets/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/assets/footer_style.css">
+    </head>
+
+    <body>
+       
+        <% include ../partial/navigation_bar.ejs %>
+        <h2 id="city_Temp" style="display: none;"><%= location %></h2>
+
+        <div class="container-fluid bg-info pb-3" style="padding-bottom:5%;">
+            <form action="/rooms" method="POST">
+                <div class="row pt-3">
+                    <input id="city" name="city" class="form-control col-xs-12 col-md-6 col-md-push-4 mr-5" style="margin-left: 18%;" type="text" placeholder="Location" aria-label="Search">
+                    <button type="submit" class="btn btn-dark  col-auto col-xs-6 col-md-auto row-sm">Search your home</button>   
+                </div>
+            </form>
+        </div>
+
+        <div class="container bg-dark mt-3 p-3">
+            
+                <div class="row">
+                    <% for(var pgs= 0; pgs < facility.length; pgs++) { %>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <a href="/lll" style="text-decoration: none;">
+                                <div class="card text-dark">
+                                        <img src="/assets/images/logo.png" height="30%"  alt="NA" class="card-img-top-fluid">
+                                        <div class="card-block">
+                                            <center><h4 class="card title"><%= facility[pgs].name %></h4></center>
+                                            <ul>
+                                                <li>Addess : <%= facility[pgs].address %></li>
+                                                <li>Landmark : <%= facility[pgs].landmark %></li>
+                                                <li>Sharing : <%= facility[pgs].sharing %></li>
+                                                <li>Phone : <%= facility[pgs].phone %></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </a>
+                        </div>
+                    <% } %>
+                </div>
+           
+        </div>
+
+        <script>
+            function city()
+            {
+                var city_value = document.getElementById('city_Temp').innerHTML;
+                var city_input = document.getElementById('city');
+                city_input.setAttribute('value',city_value);
+            }
+            city();
+        </script>
+    </body>
+</html>

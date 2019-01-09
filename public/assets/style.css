@@ -1,0 +1,57 @@
+.navigation-items
+{
+    color: black !important;
+}
+
+.navigation-pills .active a,
+.navigation-pills .active {
+    background-color: #5BC0DE;
+}
+
+.navigation-pills a:hover
+{
+    color: white !important;
+    background-color: #5BC0DE;
+}
+
+.nav-sigin-signup a:hover
+{
+    opacity: 0.8;
+    background-color: green;
+}
+
+.jumbo-1 
+{
+    margin-top: 0 !important;
+    margin-bottom: 0% !important;
+    padding-top: 10%;
+    padding-bottom: 25%;
+}
+
+.bg
+{
+    background-image: url('./images/home-bg-1.jpg');
+    height: 100%;   
+    opacity: .9;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.social-links a
+{
+    color: white !important;
+    text-decoration: none;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 0%;
+}
+
+.social-links a:hover
+{
+    border-radius: 1em;
+    background-color: white;
+    color: #5BC0DE !important;
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Guest.com - Come be my Guest!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./assets/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+        <% include ../partial/social_media.ejs %>
+        <% include ../partial/navigation_bar.ejs %>
+
+        <!-- Welcome note -->
+        <div class="jumbotron jumbotron-fluid jumbo-1 bg text-center mb-2 text-white bg-gradient-dark pt-6">
+            <div class="container bg-transparent poster-container">
+                <h1 class="display-4">Welcome to Guest</h1>
+                <!-- <h6>Find your home away from home..</h6> -->
+                <h1 class="display-4">Experience your home away from home</h1>
+                <h6>Will Have You Feeling Like Royalty During Your Stay..</h6>
+            </div>
+        </div>
+
+        <!-- Search bar -->
+        <div class="container-fluid bg-white justify-content-center mb-0" style="padding-bottom:5%;">
+            <center><h3 class="pt-4 mb-5 text-dark">Get your home away from home</h3></center>   
+            <form action="/rooms" method="POST">
+                <div class="row">
+                    <input class="form-control col-xs-12 col-md-6 col-md-push-4 mr-5" style="margin-left: 18%;" type="text" placeholder="Search" name="city" aria-label="Search" required>
+                    <button type="submit" class="btn btn-dark  col-auto col-xs-6 col-md-auto row-sm">Search your home</button>   
+                </div>
+            </form>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="page-footer font-small bg-info text-white blue pt-4 mt-0">
+
+                <!-- Footer Links -->
+                <div class="container-fluid text-center text-md-left">
+            
+                <!-- Grid row -->
+                <div class="row">
+            
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+            
+                    <!-- Content -->
+                    <h5 class="text-uppercase">GUEST</h5>
+                    <p>Here you can get your choose your paying guest facility.</p>
+            
+                    </div>
+                    <!-- Grid column -->
+            
+                    <hr class="clearfix w-100 d-md-none pb-3">
+            
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+            
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Links</h5>
+                        
+                        <p style="text-align: justify;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni asperiores veritatis doloribus! </p>
+
+            
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3 bg-info">
+            
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Links</h5>
+            
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">About us</a>
+                            </li>
+                            <li>
+                                <a href="#!">Contact us</a>
+                            </li>
+                        </ul>
+            
+                    </div>
+                    <!-- Grid column -->
+            
+                </div>
+                <!-- Grid row -->
+            
+                </div>
+                <!-- Footer Links -->
+            
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                <a href="localhost:3000/"> Guest.com</a>
+                </div>
+                <!-- Copyright -->
+            
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+</html>

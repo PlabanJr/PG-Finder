@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Guest.com - Come be my Guest!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/assets/footer_style.css">
+        <link rel="stylesheet" type="text/css" href="/assets/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        
+        <% include ../partial/social_media.ejs %>
+        <% include ../partial/navigation_bar.ejs %>
+
+        <div class="container bg-info p-4 mt-4 mb-4 rounded">
+            <form action="/dashboard" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="facility_name">Name</label>
+                        <input type="text" name="facility_name" class="form-control" id="facility_name" placeholder="Facility name" pattern="^[a-zA-Z ]{5,20}" required>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="sharing">Sharing</label>
+                        <input type="number" name="sharing" class="form-control" id="sharing" pattern="[1-4]{1,1}" placeholder="Sharing" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" name="address" id="address" rows="3"  placeholder="Address" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="city">City</label>
+                        <input type="text" name="city" class="form-control" id="city" placeholder="City" pattern="^[a-zA-Z ]{5,20}" required>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="city">Landmark</label>
+                        <input type="text" name="landmark" class="form-control" id="landmark" placeholder="Landmark" pattern="^[a-zA-Z ]{5,20}" required>
+                    </div>
+                    
+                    <div class="form-group col-md-3">
+                        <label for="phone">Mobile no</label>
+                        <input type="tel" name="phone" class="form-control" id="phone" placeholder="Mobile" pattern="^[6-9]\d{9}$" required>
+                    </div>
+                </div>
+
+                <!-- <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="photos">Photos</label>
+                        <input type="file" name="photos" class="form-control-file bg-light rounded" id="photos" placeholder="Photos" >
+                    </div>
+                </div> -->
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Owner email" pattern="^((([!#$%&'*+\-/=?^_`{|}~\w])|([!#$%&'*+\-/=?^_`{|}~\w][!#$%&'*+\-/=?^_`{|}~\.\w]{0,}[!#$%&'*+\-/=?^_`{|}~\w]))[@]\w+([-.]\w+)*\.\w+([-.]\w+)*)$" name="email" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+          
+
+       
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
+

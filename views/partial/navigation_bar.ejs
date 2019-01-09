@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <a class="navbar-brand ml-5" href="/">
+            <img src="./assets/images/logo.png" height="5%" width="30" alt="gg"> <strong style="color:black">Guest.com</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"> <i class="fa fa-navicon" style="color: black !important;"></i></span>
+        </button>
+          
+        <div class="collapse navbar-collapse " id="navigation"> 
+            <ul class="nav nav-pills navbar-nav ml-auto navigation-pills">
+                <li class="nav-item active rounded">
+                    <a class="nav-link navigation-items" href="/"><i class="fa fa-fw fa-home"></i>Home </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link navigation-items" href="/contact_us"><i class="fa fa-volume-control-phone"></i> Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link navigation-items" href="/about"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
+                </li>
+
+                <li class="nav-item nav-sigin-signup">
+                    <% if (user == 1 || user == 2) { %>
+                        <a class="nav-link navigation-items" href="/logout"><i class="fa fa-user-plus"></i> Logout</a>
+                    <% }else { %>
+                        <a class="nav-link navigation-items" href="/login"><i class="fa fa-user-plus"></i> Signin/Sigup</a>
+                    <% } %>
+                </li>
+            
+            </ul>
+        </div>
+</nav>
